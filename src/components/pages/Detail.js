@@ -1,13 +1,9 @@
 /*** import externals ***/
 import React from "react"
-import { View, Text } from "react-native"
+import DetailLayout from "../layouts/DetailLayout/DetailLayout"
 
-const DetailScreen = () => {
-  return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Detail Screen</Text>
-    </View>
-  )
+const DetailScreen = ({ route }) => {
+  return <DetailLayout productData={route.params.product} />
 }
 
 export default DetailScreen

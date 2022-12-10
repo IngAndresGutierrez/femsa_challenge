@@ -12,3 +12,9 @@ export const getTotalPoints = (productsList) => {
 
   return totalPointsWithFormat
 }
+
+export const verifyRedemption = (product) => {
+  let pointsText = product.is_redemption ? `-${product.points}` : product.points
+
+  return pointsText
+}

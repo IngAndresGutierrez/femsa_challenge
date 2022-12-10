@@ -9,14 +9,14 @@ import MovementsList from "../../organisms/MovementsList"
 import { useGetProducts } from "../../../hooks/useGetProducts"
 import ButtonsFilterPoints from "../../organisms/ButtonsFilerPoints"
 
-const HomeLayout = () => {
-  const {productsList} = useGetProducts()
+const HomeLayout = ({ navigation }) => {
+  const { productsList } = useGetProducts()
   const totalPoints = getTotalPoints(productsList)
 
   return (
     <View>
-      <CardPoints totalPoints={totalPoints}/>
-      <MovementsList productsList={productsList}/>
+      <CardPoints totalPoints={totalPoints} />
+      <MovementsList navigation={navigation} />
       <ButtonsFilterPoints />
     </View>
   )

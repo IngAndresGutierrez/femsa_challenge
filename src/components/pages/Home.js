@@ -3,8 +3,8 @@ import React from "react"
 
 import HomeLayout from "../layouts/HomeLayout"
 
-const HomeScreen = () => {
-  return <HomeLayout />
+const HomeScreen = ({ navigation }) => {
+  return <HomeLayout navigation={navigation} />
 }
 
-export default HomeScreen;
+export default HomeScreen
